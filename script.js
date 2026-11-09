@@ -8,7 +8,7 @@ const perfumes = [
     scent: "Crisp citrus, pink pepper, and clean vetiver",
     vibe: "The ultimate 'just stepped out of the shower' clean aura. Super fresh, sharp, and effortlessly professional for early morning classes.",
     category: "Fresh Clean",
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=800"
+    image: "1.jpg"
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const perfumes = [
     scent: "Grapefruit, pink pepper, and rich amber",
     vibe: "Mysterious yet uplifting. Perfect balance of bright citrus up top and a smooth, confident woody dry-down for afternoon hangouts.",
     category: "Woody Amber",
-    image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=800"
+    image: "2.jpg"
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ const perfumes = [
     scent: "Icy spearmint, Calabrian bergamot, lemon zest, and black tea",
     vibe: "An absolute air-conditioner in a bottle. Super cooling, sharp, and refreshing—ideal for beating the scorching Malaysian afternoon heat.",
     category: "Aquatic Icy",
-    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=800"
+    image: "3.jpg"
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const perfumes = [
     scent: "Apple, ginger, sage, and blue woody notes",
     vibe: "The ultimate heavy-hitting compliment magnet. Clean, sweet, and bold—your go-to 'dumb reach' for presentations, dates, or night events.",
     category: "Fresh Clean",
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800"
+    image: "4.jpg"
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const perfumes = [
     scent: "Frozen apple, bergamot, star anise, plum, orange blossom, and ambergris",
     vibe: "The ultimate beast-mode compliment-getter. Super loud, frosty-sweet, and aquatic—built to project heavily and pull attention wherever you go on campus.",
     category: "Fresh Clean",
-    image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&q=80&w=800"
+    image: "5.jpg"
   }
 ];
 
