@@ -311,10 +311,12 @@ body {
   box-shadow: var(--shadow-hover);
 }
 
+/* Card Image Container locked to 3:4 Aspect Ratio */
 .card-img-wrapper {
   width: 100%;
-  height: 240px;
-  background-color: #F2EFE9;
+  aspect-ratio: 3 / 4; /* Forces exact 3:4 vertical orientation */
+  max-height: 380px;   /* Prevents images from expanding too large on desktop */
+  background-color: #121212;
   position: relative;
   overflow: hidden;
 }
@@ -322,12 +324,15 @@ body {
 .card-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;     /* Fits image completely without distortion */
+  object-position: center; /* Keeps the perfume bottle perfectly centered */
   transition: transform 0.5s ease;
 }
 
-.perfume-card:hover .card-img {
-  transform: scale(1.04);
+.perfume-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .badge-dupe {
@@ -347,7 +352,7 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex: 1; /* Pushes footer buttons straight to the bottom */
 }
 
 .card-header {
@@ -386,7 +391,7 @@ body {
 .card-footer {
   display: flex;
   gap: 10px;
-  margin-top: auto;
+  margin-top: auto; /* Locks buttons cleanly to the bottom line */
 }
 
 .btn-card-order {
