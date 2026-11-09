@@ -1,4 +1,4 @@
-// Perfume Dataset
+// Perfume Dataset with Categories
 const perfumes = [
   {
     id: 1,
@@ -7,6 +7,7 @@ const perfumes = [
     dupe: "Louis Vuitton Météore (RM1700+)",
     scent: "Crisp citrus, pink pepper, and clean vetiver",
     vibe: "The ultimate 'just stepped out of the shower' clean aura. Super fresh, sharp, and effortlessly professional for early morning classes.",
+    category: "Fresh Clean",
     image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=800"
   },
   {
@@ -16,6 +17,7 @@ const perfumes = [
     dupe: "CH Badboy Cobalt (RM460+)",
     scent: "Grapefruit, pink pepper, and rich amber",
     vibe: "Mysterious yet uplifting. Perfect balance of bright citrus up top and a smooth, confident woody dry-down for afternoon hangouts.",
+    category: "Woody Amber",
     image: "https://images.unsplash.com/photo-1523293182086-7651a899d37f?auto=format&fit=crop&q=80&w=800"
   },
   {
@@ -25,6 +27,7 @@ const perfumes = [
     dupe: "Crisp Icy-Citrus & Mint",
     scent: "Icy spearmint, Calabrian bergamot, lemon zest, and black tea",
     vibe: "An absolute air-conditioner in a bottle. Super cooling, sharp, and refreshing—ideal for beating the scorching Malaysian afternoon heat.",
+    category: "Aquatic Icy",
     image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&q=80&w=800"
   },
   {
@@ -34,6 +37,7 @@ const perfumes = [
     dupe: "YSL Y Eau de Parfum (RM670)",
     scent: "Apple, ginger, sage, and blue woody notes",
     vibe: "The ultimate heavy-hitting compliment magnet. Clean, sweet, and bold—your go-to 'dumb reach' for presentations, dates, or night events.",
+    category: "Woody Amber",
     image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800"
   },
   {
@@ -43,18 +47,25 @@ const perfumes = [
     dupe: "Paco Rabanne Invictus Aqua (RM490+)",
     scent: "Frozen apple, bergamot, star anise, plum, orange blossom, and ambergris",
     vibe: "The ultimate beast-mode compliment-getter. Super loud, frosty-sweet, and aquatic—built to project heavily and pull attention wherever you go on campus.",
+    category: "Aquatic Icy",
     image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&q=80&w=800"
   }
 ];
 
 const ORDER_FORM_URL = "https://forms.gle/Egd8tSz6ENcHgPVP7";
+let currentCategory = 'All';
 
 // Render Catalog Cards
-function renderCatalog() {
+function renderCatalog(itemsToRender) {
   const grid = document.getElementById('perfumeGrid');
   if (!grid) return;
 
-  grid.innerHTML = perfumes.map(perfume => `
+  if (itemsToRender.length === 0) {
+    grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">No matching fragrances found.</div>`;
+    return;
+  }
+
+  grid.innerHTML = itemsToRender.map(perfume => `
     <article class="perfume-card">
       <div class="card-img-wrapper">
         <img src="${perfume.image}" alt="${perfume.name}" class="card-img" loading="lazy" />
@@ -74,6 +85,29 @@ function renderCatalog() {
       </div>
     </article>
   `).join('');
+}
+
+// Filter logic by search & category
+function filterPerfumes() {
+  const query = document.getElementById('searchInput').value.toLowerCase();
+  
+  const filtered = perfumes.filter(p => {
+    const matchesCategory = currentCategory === 'All' || p.category === currentCategory;
+    const matchesSearch = p.name.toLowerCase().includes(query) || p.scent.toLowerCase().includes(query) || p.dupe.toLowerCase().includes(query);
+    return matchesCategory && matchesSearch;
+  });
+
+  renderCatalog(filtered);
+}
+
+function setCategory(category, btnElement) {
+  currentCategory = category;
+  
+  // Update active pill styling
+  document.querySelectorAll('.pill-btn').forEach(btn => btn.classList.remove('active'));
+  btnElement.classList.add('active');
+
+  filterPerfumes();
 }
 
 // Modal Functions
@@ -106,27 +140,20 @@ function openModal(id) {
 
 function closeModal() {
   const modal = document.getElementById('perfumeModal');
-  if (modal) {
-    modal.classList.remove('active');
-  }
+  if (modal) modal.classList.remove('active');
 }
 
-// Event Listeners
+// Initialize
 document.addEventListener('DOMContentLoaded', () => {
-  renderCatalog();
+  renderCatalog(perfumes);
 
   const closeBtn = document.getElementById('modalClose');
   const modal = document.getElementById('perfumeModal');
 
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeModal);
-  }
-
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
   if (modal) {
     modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        closeModal();
-      }
+      if (e.target === modal) closeModal();
     });
   }
 });
