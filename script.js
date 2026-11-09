@@ -37,7 +37,7 @@ const perfumes = [
     dupe: "YSL Y Eau de Parfum (RM670)",
     scent: "Apple, ginger, sage, and blue woody notes",
     vibe: "The ultimate heavy-hitting compliment magnet. Clean, sweet, and bold—your go-to 'dumb reach' for presentations, dates, or night events.",
-    category: "Woody Amber",
+    category: "Fresh Clean",
     image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=800"
   },
   {
@@ -47,7 +47,7 @@ const perfumes = [
     dupe: "Paco Rabanne Invictus Aqua (RM490+)",
     scent: "Frozen apple, bergamot, star anise, plum, orange blossom, and ambergris",
     vibe: "The ultimate beast-mode compliment-getter. Super loud, frosty-sweet, and aquatic—built to project heavily and pull attention wherever you go on campus.",
-    category: "Aquatic Icy",
+    category: "Fresh Clean",
     image: "https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&q=80&w=800"
   }
 ];
