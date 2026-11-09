@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AF DECANT | Premium Fragrance Decants</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    ❄️ 5ML ≈ 90–100 SPRAYS &nbsp;|&nbsp; 100% ORIGINAL DUBAI PERFUME &nbsp;|&nbsp; BUKTI SCAN LEGIT TERSEDIA
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="brand-logo">AF DECANT<span>.</span></a>
+    <div class="nav-links">
+      <a href="#catalog">Catalog</a>
+      <a href="#features">Why Us</a>
+      <a href="#delivery">Pickup & Delivery</a>
+    </div>
+    <a href="https://forms.gle/Egd8tSz6ENcHgPVP7" target="_blank" rel="noopener" class="btn-primary-nav">Order Now</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-tag">Student Friendly Prices</div>
+    <h1 class="hero-title">Elevate Your Daily Aura.</h1>
+    <p class="hero-subtitle">
+      Authentic 5ml decants tailored for your daily campus routine. High-performance fragrances, zero fluff, budget-friendly.
+    </p>
+    <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a href="#catalog" class="btn-solid">Explore Fragrances</a>
+      <a href="https://forms.gle/Egd8tSz6ENcHgPVP7" target="_blank" rel="noopener" class="btn-outline">Quick Order Form ↗</a>
+    </div>
+  </section>
+
+  <!-- Catalog Section -->
+  <section id="catalog" class="catalog-section">
+    <div class="section-header">
+      <h2 class="section-title">Curated Decants</h2>
+      <p class="section-desc">Hand-picked fragrances for every time, temperature, and vibe.</p>
+    </div>
+
+    <div class="catalog-grid" id="perfumeGrid">
+      <!-- Perfume cards rendered dynamically via script.js -->
+    </div>
+  </section>
+
+  <!-- Value Propositions / Features -->
+  <section id="features" class="features-section">
+    <div class="section-header">
+      <h2 class="section-title">The Decant Advantage</h2>
+      <p class="section-desc">Why spend RM400+ when you can smell elite for RM12?</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">✨</div>
+        <h3 class="feature-title">100% Original Dubai</h3>
+        <p class="feature-desc">Authentic juice sourced directly. Scan proof available upon request for absolute peace of mind.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">💧</div>
+        <h3 class="feature-title">90–100 Sprays</h3>
+        <p class="feature-desc">Compact 5ml glass atomizers engineered to give you up to a full month of daily wear.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎓</div>
+        <h3 class="feature-title">Student Friendly</h3>
+        <p class="feature-desc">High-end designer alternatives starting at just RM12. Perfect for everyday campus life.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pickup & Delivery Section -->
+  <section id="delivery" style="margin-bottom: 90px;">
+    <div class="delivery-card">
+      <h2>Pickup & Delivery Info</h2>
+      <p style="color: var(--text-muted); margin-bottom: 24px; font-size:0.95rem;">
+        Get your decants delivered directly to your residential college or pick them up locally.
+      </p>
+
+      <div class="delivery-badges">
+        <div class="badge-item">
+          <span style="font-size: 1.2rem;">📍</span>
+          <div>
+            <strong>Self Pickup</strong>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Available at KTDI</div>
+          </div>
+        </div>
+
+        <div class="badge-item">
+          <span style="font-size: 1.2rem;">🛵</span>
+          <div>
+            <strong>UTM Delivery</strong>
+            <div style="font-size: 0.85rem; color: var(--text-muted);">Entire UTM Area (+RM2)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <h2 style="font-family:'Playfair Display', serif; font-size:2rem; margin-bottom:12px;">Ready to Level Up Your Scent Game?</h2>
+    <p style="color:var(--text-muted); margin-bottom:24px;">Click below to submit your order via our official Google Form.</p>
+    <a href="https://forms.gle/Egd8tSz6ENcHgPVP7" target="_blank" rel="noopener" class="btn-solid" style="padding: 14px 32px; font-size: 0.95rem;">Place Your Order Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="brand-logo" style="margin-bottom:8px;">AF DECANT<span>.</span></div>
+    <p>© 2026 AF Decant. Premium Student Fragrance Decants.</p>
+  </footer>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="perfumeModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- External Script -->
+  <script src="script.js"></script>
+</body>
+</html>
