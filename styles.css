@@ -38,18 +38,97 @@ body {
   text-transform: uppercase;
 }
 
-/* Navigation */
+/* Navigation Header */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 8%;
-  background: rgba(250, 249, 246, 0.9);
-  backdrop-filter: blur(10px);
+  padding: 18px 5%;
+  background: rgba(250, 249, 246, 0.95);
+  backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid var(--border-subtle);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: #1A1918;
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.brand-divider {
+  color: #D3CEC4;
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+
+.brand-tagline {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: #8C887B;
+  text-transform: uppercase;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #55524A;
+  font-size: 0.88rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #1A1918;
+}
+
+.btn-order-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1A1918;
+  color: #FFFFFF;
+  padding: 10px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.btn-order-pill:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+.btn-arrow {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .brand-divider,
+  .brand-tagline {
+    display: none;
+  }
 }
 
 .brand-logo {
@@ -100,9 +179,20 @@ body {
 /* Hero */
 .hero {
   text-align: center;
-  padding: 90px 20px 70px;
-  max-width: 800px;
+  padding: 120px 20px 100px;
+  max-width: 100%;
   margin: 0 auto;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('https://p.globalsources.com/IMAGES/PDT/B5758838405/Square-Shape-Glass-Perfume-Bottle.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+}
+
+.hero .hero-subtitle,
+.hero .hero-title {
+  color: #FFFFFF;
 }
 
 .hero-tag {
