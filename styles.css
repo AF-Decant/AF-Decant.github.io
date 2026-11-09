@@ -25,7 +25,7 @@ body {
   -webkit-font-smoothing: antialiased;
   
   /* Full-page Background Image with Dark Overlay */
-  background-image: linear-gradient(rgba(18, 18, 18, 0.88), rgba(18, 18, 18, 0.88)), url('BGPERFUME.jpg');
+  background-image: linear-gradient(rgba(18, 18, 18, 0.88), rgba(18, 18, 18, 0.88)), url('https://img.drz.lazcdn.com/static/pk/p/e05fa7e07a964c6df8dcfb5a7ba38b82.jpg_720x720q80.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Keeps the background pinned smoothly while scrolling */
