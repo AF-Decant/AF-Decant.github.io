@@ -48,18 +48,32 @@
       <a href="https://forms.gle/Egd8tSz6ENcHgPVP7" target="_blank" rel="noopener" class="btn-outline">Quick Order Form ↗</a>
     </div>
   </section>
+<!-- Catalog Section -->
+<section id="catalog" class="catalog-section">
+  <div class="section-header">
+    <h2 class="section-title">Curated Decants</h2>
+    <p class="section-desc">Hand-picked fragrances for every time, temperature, and vibe.</p>
+  </div>
 
-  <!-- Catalog Section -->
-  <section id="catalog" class="catalog-section">
-    <div class="section-header">
-      <h2 class="section-title">Curated Decants</h2>
-      <p class="section-desc">Hand-picked fragrances for every time, temperature, and vibe.</p>
+  <!-- Search and Filter Bar -->
+  <div class="filter-bar">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Search perfume name or note..." oninput="filterPerfumes()" />
     </div>
+    
+    <div class="filter-pills">
+      <button class="pill-btn active" onclick="setCategory('All', this)">All</button>
+      <button class="pill-btn" onclick="setCategory('Fresh Clean', this)">Fresh Clean</button>
+      <button class="pill-btn" onclick="setCategory('Woody Amber', this)">Woody Amber</button>
+      <button class="pill-btn" onclick="setCategory('Aquatic Icy', this)">Aquatic Icy</button>
+    </div>
+  </div>
 
-    <div class="catalog-grid" id="perfumeGrid">
-      <!-- Perfume cards rendered dynamically via script.js -->
-    </div>
-  </section>
+  <div class="catalog-grid" id="perfumeGrid">
+    <!-- Rendered dynamically via script.js -->
+  </div>
+</section>
 
   <!-- Value Propositions / Features -->
   <section id="features" class="features-section">
