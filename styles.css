@@ -20,10 +20,17 @@
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: var(--bg-main);
-  color: var(--text-main);
+  color: #FFFFFF; /* Makes all default body text crisp white */
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  
+  /* Full-page Background Image with Dark Overlay */
+  background-image: linear-gradient(rgba(18, 18, 18, 0.88), rgba(18, 18, 18, 0.88)), url('BGPERFUME.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps the background pinned smoothly while scrolling */
+  background-repeat: no-repeat;
+  background-color: #121212; /* Fallback color if image is loading */
 }
 
 /* Announcement Bar */
@@ -631,6 +638,28 @@ body {
     flex-direction: column;
     align-items: stretch;
   }
+  /* Translucent Glass Cards for Perfumes & Features */
+.perfume-card,
+.feature-card,
+.delivery-card {
+  background: rgba(255, 255, 255, 0.05) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+}
+
+.card-title,
+.feature-title,
+.section-title {
+  color: #FFFFFF !important;
+}
+
+.card-vibe,
+.card-scent,
+.feature-desc,
+.section-desc {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
   .search-box {
     max-width: 100%;
   }
