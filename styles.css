@@ -450,6 +450,21 @@ body {
 /* Mobile Responsiveness */
 @media (max-width: 640px) {
   .hero-title { font-size: 2.2rem; }
+
+   /* Header Layout Safety Fix */
+.navbar {
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 14px 20px;
+  }
+  .hero {
+    padding: 60px 16px 40px;
+  }
+}
   .brand-divider, .brand-tagline { display: none; }
   .filter-bar { flex-direction: column; align-items: stretch; }
   .search-box { max-width: 100%; }
