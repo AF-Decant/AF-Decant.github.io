@@ -465,3 +465,105 @@ body {
     padding: 60px 16px 40px;
   }
 }
+   /* Features & Delivery Section Styling */
+.features-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.feature-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--border-glass-hover);
+  transform: translateY(-3px);
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.feature-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.feature-desc {
+  font-size: 0.88rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
+/* Delivery Banner Layout */
+.delivery-banner {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  backdrop-filter: blur(16px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.delivery-options {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.delivery-badge {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-glass);
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.delivery-badge span {
+  font-size: 0.78rem;
+  color: var(--text-sub);
+}
+
+.delivery-badge strong {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .delivery-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .delivery-options {
+    width: 100%;
+    flex-direction: column;
+  }
+  .delivery-badge {
+    width: 100%;
+  }
+}
